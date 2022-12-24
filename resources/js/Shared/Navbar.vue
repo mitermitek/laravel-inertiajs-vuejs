@@ -18,7 +18,7 @@
                 </svg>
             </button>
             <div id="navbar-default" :class="showMenu ? '' : 'hidden'"
-                 class="flex flex-col w-full mt-5 md:flex md:w-auto md:flex-row md:mt-0">
+                 class="flex flex-col w-full mt-5 md:flex md:w-auto md:flex-row md:mt-0 md:items-center">
                 <Link :href="`/`"
                       class="mr-0 mb-2 p-2 font-semibold rounded hover:text-red-500 bg-gray-50 md:bg-transparent md:mb-0 md:mr-5">
                     Home
@@ -26,6 +26,16 @@
                 <Link :href="`/about`"
                       class="mr-0 mb-2 p-2 font-semibold rounded hover:text-red-500 bg-gray-50 md:bg-transparent md:mb-0 md:mr-5">
                     About
+                </Link>
+                <Link v-if="$page.props.auth.user" href="/sign-out">
+                    <button type="button" class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:ring-gray-300 font-medium rounded text-sm px-4 py-2 focus:outline-none">
+                        Sign out
+                    </button>
+                </Link>
+                <Link v-else href="/sign-in">
+                    <button type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 font-medium rounded text-sm px-4 py-2 focus:outline-none">
+                        Sign in
+                    </button>
                 </Link>
             </div>
         </div>

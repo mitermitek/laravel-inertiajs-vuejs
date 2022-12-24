@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Auth\SignInController;
+use App\Http\Controllers\Auth\SignOutController;
+use App\Http\Controllers\Auth\SignUpController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +20,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WelcomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
+
+Route::get('/sign-up', [SignUpController::class, 'index']);
+Route::post('/sign-up', [SignUpController::class, 'register']);
+
+Route::get('/sign-in', [SignInController::class, 'index']);
+Route::post('/sign-in', [SignInController::class, 'authenticate']);
+
+Route::get('/sign-out', [SignOutController::class, 'signOut']);
