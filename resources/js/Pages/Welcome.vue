@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <h1>Hello World!</h1>
+        <h1 class="text-2xl font-bold mb-5">Hello World!</h1>
     </Layout>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <h1>About</h1>
+        <h1 class="text-2xl font-bold mb-5">About</h1>
 
         <p>Laravel web app starter with Inertia.js and Vue.js.</p>
     </Layout>
