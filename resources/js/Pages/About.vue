@@ -12,7 +12,6 @@ import Layout from "../Shared/Layout.vue";
 export default {
     name: "About",
     components: {Layout}
-
 }
 </script>
 
